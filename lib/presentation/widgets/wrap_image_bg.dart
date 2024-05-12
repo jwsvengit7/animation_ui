@@ -26,7 +26,34 @@ class WrapImageBackgroud extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             borderRadius: BorderRadius.circular(30),
-          )),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(32, 232, 236, 234),
+                    borderRadius: BorderRadius.circular(20)
+
+                  ),
+                  child: Container(
+                    width: 50,
+                    height: 30,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(100)),
+                    color: Colors.white,
+                    alignment: Alignment.bottomRight),
+
+              
+                   
+                ),
+              )
+
+
+          ]),),
     );
   }
 }
