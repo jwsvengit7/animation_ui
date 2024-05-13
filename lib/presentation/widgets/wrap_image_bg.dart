@@ -4,10 +4,12 @@ class WrapImageBackgroud extends StatelessWidget {
   final double width;
   final String image;
   final int index;
+  final double animate;
   const WrapImageBackgroud(
       {super.key,
       required this.width,
       required this.image,
+      required this.animate,
       required this.index});
 
   @override
@@ -29,26 +31,34 @@ class WrapImageBackgroud extends StatelessWidget {
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(32, 232, 236, 234),
-                    borderRadius: BorderRadius.circular(20)
-
-                  ),
-                  child: Container(
-                    width: 50,
-                    height: 30,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(100)),
-                    color: Colors.white,
-                    alignment: Alignment.bottomRight),
-
-              
-                   
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [Padding(
+  padding: const EdgeInsets.all(8.0),
+  child: Container(
+    width: MediaQuery.of(context).size.width,
+    height: 50,
+    decoration: BoxDecoration(
+      color: const Color.fromARGB(102, 255, 255, 255), 
+      borderRadius: BorderRadius.circular(20)
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(""),
+           Text("GladKovia St, 102",textAlign: TextAlign.center,),
+       Container(
+         width: index==1 ? 40 : 30,
+         height: index==1 ? 40 : 30,
+         decoration: BoxDecoration(
+           borderRadius: BorderRadius.circular(100),
+           color: Colors.white,
+         ),
+         alignment: Alignment.center,
+         child: const Icon(Icons.chevron_right),
+       ),
+      ]
+    ),
+  
                 ),
               )
 

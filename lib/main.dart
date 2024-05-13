@@ -1,4 +1,3 @@
-import 'package:animate_app/presentation/count.dart';
 import 'package:animate_app/presentation/home_page.dart';
 import 'package:animate_app/presentation/map_ui.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +19,6 @@ class MyApp extends StatelessWidget {
         ),
         routes: {
           "/": (context) => const MyAppAnimate(),
-          "/map": (context) =>  MyWidget()
         },
         initialRoute: "/");
   }
